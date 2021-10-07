@@ -20,7 +20,7 @@ public class CollisionFly : MonoBehaviour
     {
         if (col.gameObject.tag == "fly")
         {
-            Debug.Log("Check");
+            //Debug.Log("Check");
             InGamePlayer.flyCheck = true;
         }
     }

@@ -26,7 +26,7 @@ public class Follow : MonoBehaviour
         //v = new Vector3(270, 45, -270);
         //this.transform.Rotate(v*Time.deltaTime); //이새끼 왜 로테이션이 쳐안먹히는거야
 
-        Debug.Log(this.transform.rotation);
+        //Debug.Log(this.transform.rotation);
         fHeight = Random.Range(0,0); //펄럭펄럭 
 
         Vector3 Pos = target.position + new Vector3(0.0f, fHeight, 0.0f); //거리

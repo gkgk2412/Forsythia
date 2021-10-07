@@ -10,6 +10,14 @@ TagManager:
   - Cloud
   - fly
   - break
+  - cube
+  - Planet
+  - potal
+  - normal
+  - breakBranch
+  - forsy
+  - leafBranch
+  - mainBranch
   layers:
   - Default
   - TransparentFX
@@ -22,7 +30,7 @@ TagManager:
   - Lighting
   - Ground
   - Postprocessing
-  - 
+  - new
   - 
   - 
   - 

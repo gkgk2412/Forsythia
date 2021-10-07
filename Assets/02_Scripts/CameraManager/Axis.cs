@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Axis : MonoBehaviour
 {
-
     public Quaternion TargetRotation;
     public Transform CameraVector;
 
@@ -31,8 +30,8 @@ public class Axis : MonoBehaviour
     // 카메라 줌.
     void Zoom()
     {
-        Distance += Input.GetAxis("Mouse ScrollWheel") * ZoomSpeed * -1;
-        Distance = Mathf.Clamp(Distance, 100f, 200f);
+        Distance += Input.GetAxis("Mouse ScrollWheel") * ZoomSpeed * -5;
+        Distance = Mathf.Clamp(Distance, 100f, 300f);
 
         AxisVec = transform.forward * -1;
         AxisVec *= Distance;

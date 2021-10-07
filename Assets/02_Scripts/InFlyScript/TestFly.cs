@@ -39,15 +39,15 @@ public class TestFly : MonoBehaviour
             SceneManager.LoadScene("TestInGame");
         }
 
-        if (ClickButton.IsStop) //옵션을 눌러 켜졌으면
-        {
-            Time.timeScale = 0; //시간 멈춤
-            Panel.SetActive(true); //옵션 판넬 보이게 함
-        }
-        if (!ClickButton.IsStop) //옵션을 눌러 꺼졌으면
-        {
-            Time.timeScale = 1; //시간 움직임
-            Panel.SetActive(false); //옵션 판넬 안보이게 함
-        }
+        //if (ClickButton.IsStop) //옵션을 눌러 켜졌으면
+        //{
+        //    Time.timeScale = 0; //시간 멈춤
+        //    Panel.SetActive(true); //옵션 판넬 보이게 함
+        //}
+        //if (!ClickButton.IsStop) //옵션을 눌러 꺼졌으면
+        //{
+        //    Time.timeScale = 1; //시간 움직임
+        //    Panel.SetActive(false); //옵션 판넬 안보이게 함
+        //}
     }
 }

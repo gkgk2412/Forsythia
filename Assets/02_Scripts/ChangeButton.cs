@@ -4,43 +4,28 @@ using UnityEngine;
 
 public class ChangeButton : MonoBehaviour
 {
-    public GameObject St;
-    public GameObject We;
-
-    Vector3 StVector; //st위치
-    Vector3 WeVector; //we위치
-    Vector3 TempVector; //위치 저장할 변수
-
-    public static bool IsChange; //바뀌었는지 안 바뀌었는지
-
-    void Start()
-    {
-       // IsChange = false; //안 바뀐 상태로 시작 (강 / 약)
-        StVector = St.transform.position; //st의 처음위치 저장
-        WeVector = We.transform.position; //we의 처음위치 저장
-    }
-
-    void Update()
-    {
-        St.transform.position = StVector;
-        We.transform.position = WeVector;
-    }
+    public GameObject Green;
+    public GameObject Yellow;
+    public GameObject joyStick;
+    public GameObject joyStickBack;
+    public GameObject jumpBnt;
 
     public void ChangeBtton()
     {
-        if (IsChange) //바뀌었으면
-        {
-            TempVector = StVector; //st위치를 temp에 저장
-            StVector = WeVector; //we위치를 st에 넣음 
-            WeVector = TempVector; //temp위치를 we에 저장
-            IsChange = false;
-        }
-        else if (!IsChange) //안 바뀌었으면
-        {
-            TempVector = StVector;
-            StVector = WeVector;
-            WeVector = TempVector;
-            IsChange = true;
-        }
+        Vector3 Temp = new Vector3(0,0,0);
+
+        //색상 변경
+        Temp = Green.transform.position;
+        Green.transform.position = Yellow.transform.position;
+        Yellow.transform.position = Temp;
+
+        //실제로 조이스틱 위치와 점프 버튼 위치 변경
+        Temp = jumpBnt.transform.position;
+        jumpBnt.transform.position = joyStick.transform.position;
+        joyStick.transform.position = Temp;
+        joyStickBack.transform.position = Temp;
+
+        //조이스틱 컨트롤 위해서 위치 변경된 값을 전달.
+        Controller.StickFirstPos = joyStick.transform.position;
     }
 }

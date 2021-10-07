@@ -331,18 +331,18 @@ public class InGamePlayer : MonoBehaviour
             }
         }
 
-        if (ClickButton.IsStop) //옵션을 눌러 켜졌으면
-        {
-            Time.timeScale = 0; //시간 멈춤
-            //BackSound.IsOff = false; //노래는 멈추지 않게 함
-            //BackSound.IsOn = true;
-            StopPanel.SetActive(true); //옵션 판넬 보이게 함
-        }
-        if (!ClickButton.IsStop) //옵션을 눌러 꺼졌으면
-        {
-            Time.timeScale = 1; //시간 움직임
-            StopPanel.SetActive(false); //옵션 판넬 안보이게 함
-        }
+        //if (ClickButton.IsStop) //옵션을 눌러 켜졌으면
+        //{
+        //    Time.timeScale = 0; //시간 멈춤
+        //    //BackSound.IsOff = false; //노래는 멈추지 않게 함
+        //    //BackSound.IsOn = true;
+        //    StopPanel.SetActive(true); //옵션 판넬 보이게 함
+        //}
+        //if (!ClickButton.IsStop) //옵션을 눌러 꺼졌으면
+        //{
+        //    Time.timeScale = 1; //시간 움직임
+        //    StopPanel.SetActive(false); //옵션 판넬 안보이게 함
+        //}
 
         LimitTime -= Time.deltaTime; // 일정한 시간에 따라 감소
         branchTimer += Time.deltaTime; // 일정한 시간에 따라 증가
@@ -543,7 +543,7 @@ public class InGamePlayer : MonoBehaviour
                             {
                                 GameObject _leaf = Instantiate(BranchArray[RandBranchIndex], new Vector3(pos2.x, pos2.y, pos2.z), Quaternion.Euler(-2.554f, 34.624f, 5.799f)) as GameObject;
                                 checkCreate = true;
-                            Debug.Log(ChangeDir);
+                            ////Debug.Log(ChangeDir);
                             g_intList.Add(ChangeDir);
 
                             // 생성된 오브젝트를 leafList 에 add로 추가.
@@ -557,7 +557,7 @@ public class InGamePlayer : MonoBehaviour
                             {
                                 //배열0~4까지의 오브젝트를 랜덤생성한다. 위치는 RightBranchPos위치 
                                 GameObject _leaf = Instantiate(BranchArray[RandBranchIndex], new Vector3(pos2.x, pos2.y, pos2.z), Quaternion.Euler(0f, 90f, 0f)) as GameObject;
-                            Debug.Log(ChangeDir);
+                            ////Debug.Log(ChangeDir);
                             g_intList.Add(ChangeDir);
 
                             // 생성된 오브젝트를 leafList 에 add로 추가.
@@ -580,7 +580,7 @@ public class InGamePlayer : MonoBehaviour
                                 checkCreate = true;
                             g_intList.Add(ChangeDir);
 
-                            Debug.Log(ChangeDir);
+                            //Debug.Log(ChangeDir);
                             // 생성된 오브젝트를 leafList 에 add로 추가.
                             leafList.Add(_leaf);
                             }
@@ -593,7 +593,7 @@ public class InGamePlayer : MonoBehaviour
                                 checkCreate = true;
                             g_intList.Add(ChangeDir);
 
-                            Debug.Log(ChangeDir);
+                            //Debug.Log(ChangeDir);
                             // 생성된 오브젝트를 leafList 에 add로 추가.
                             leafList.Add(_leaf);
                             }
@@ -605,7 +605,7 @@ public class InGamePlayer : MonoBehaviour
                             g_intList.Add(ChangeDir);
 
 
-                            Debug.Log(ChangeDir);
+                            //Debug.Log(ChangeDir);
                             // 생성된 오브젝트를 leafList 에 add로 추가.
                             leafList.Add(_leaf);
                             }
@@ -617,7 +617,7 @@ public class InGamePlayer : MonoBehaviour
                                 checkCreate = true;
                             g_intList.Add(ChangeDir);
 
-                            Debug.Log(ChangeDir);
+                            //Debug.Log(ChangeDir);
                             // 생성된 오브젝트를 leafList 에 add로 추가.
                             leafList.Add(_leaf);
                             }
@@ -631,7 +631,7 @@ public class InGamePlayer : MonoBehaviour
                                 checkCreate = true;
                             g_intList.Add(ChangeDir);
 
-                            Debug.Log(ChangeDir);
+                            //Debug.Log(ChangeDir);
                             // 생성된 오브젝트를 leafList 에 add로 추가.
                             leafList.Add(_leaf);
                             }
@@ -652,7 +652,7 @@ public class InGamePlayer : MonoBehaviour
                             g_intList.Add(ChangeDir);
 
        
-                            Debug.Log(ChangeDir);
+                            //Debug.Log(ChangeDir);
                             // 생성된 오브젝트를 leafList 에 add로 추가.
                             leafList.Add(_leaf);
                             }
@@ -665,7 +665,7 @@ public class InGamePlayer : MonoBehaviour
                             g_intList.Add(ChangeDir);
 
        
-                            Debug.Log(ChangeDir);
+                            //Debug.Log(ChangeDir);
                             // 생성된 오브젝트를 leafList 에 add로 추가.
                             leafList.Add(_leaf);
                             }
@@ -677,7 +677,7 @@ public class InGamePlayer : MonoBehaviour
                             g_intList.Add(ChangeDir);
 
             
-                            Debug.Log(ChangeDir);
+                            //Debug.Log(ChangeDir);
                             // 생성된 오브젝트를 leafList 에 add로 추가.
                             leafList.Add(_leaf);
                             }
@@ -691,7 +691,7 @@ public class InGamePlayer : MonoBehaviour
                             g_intList.Add(ChangeDir);
 
                  
-                            Debug.Log(ChangeDir);
+                            //Debug.Log(ChangeDir);
                             // 생성된 오브젝트를 leafList 에 add로 추가.
                             leafList.Add(_leaf);
                             }
@@ -714,7 +714,7 @@ public class InGamePlayer : MonoBehaviour
                                 checkCreate = true;
                             g_intList.Add(ChangeDir);
 
-                            Debug.Log(ChangeDir);
+                            //Debug.Log(ChangeDir);
                             // 생성된 오브젝트를 leafList 에 add로 추가.
                             leafList.Add(_leaf);
                             }
@@ -726,7 +726,7 @@ public class InGamePlayer : MonoBehaviour
                                 checkCreate = true;
                             g_intList.Add(ChangeDir);
 
-                            Debug.Log(ChangeDir);
+                            //Debug.Log(ChangeDir);
                             // 생성된 오브젝트를 leafList 에 add로 추가.
                             leafList.Add(_leaf);
                             }
@@ -738,7 +738,7 @@ public class InGamePlayer : MonoBehaviour
                             g_intList.Add(ChangeDir);
 
               
-                            Debug.Log(ChangeDir);
+                            //Debug.Log(ChangeDir);
                             // 생성된 오브젝트를 leafList 에 add로 추가.
                             leafList.Add(_leaf);
                             }
@@ -752,7 +752,7 @@ public class InGamePlayer : MonoBehaviour
                             g_intList.Add(ChangeDir);
 
                   
-                            Debug.Log(ChangeDir);
+                            //Debug.Log(ChangeDir);
                             // 생성된 오브젝트를 leafList 에 add로 추가.
                             leafList.Add(_leaf);
                             }
@@ -782,7 +782,7 @@ public class InGamePlayer : MonoBehaviour
                             g_intList.Add(ChangeDir);
 
          
-                            Debug.Log(ChangeDir);
+                            //Debug.Log(ChangeDir);
                             // 생성된 오브젝트를 leafList 에 add로 추가.
                             leafList.Add(_leaf);
                             }
@@ -794,7 +794,7 @@ public class InGamePlayer : MonoBehaviour
                                 checkCreate = true;
                             g_intList.Add(ChangeDir);
 
-                            Debug.Log(ChangeDir);
+                            //Debug.Log(ChangeDir);
                             // 생성된 오브젝트를 leafList 에 add로 추가.
                             leafList.Add(_leaf);
                             }
@@ -813,7 +813,7 @@ public class InGamePlayer : MonoBehaviour
                             g_intList.Add(ChangeDir);
 
      
-                            Debug.Log(ChangeDir);
+                            //Debug.Log(ChangeDir);
                             // 생성된 오브젝트를 leafList 에 add로 추가.
                             leafList.Add(_leaf);
                             }
@@ -824,7 +824,7 @@ public class InGamePlayer : MonoBehaviour
                                 checkCreate = true;
                             g_intList.Add(ChangeDir);
 
-                            Debug.Log(ChangeDir);
+                            //Debug.Log(ChangeDir);
                             // 생성된 오브젝트를 leafList 에 add로 추가.
                             leafList.Add(_leaf);
                             }
@@ -835,7 +835,7 @@ public class InGamePlayer : MonoBehaviour
                                 checkCreate = true;
                             g_intList.Add(ChangeDir);
 
-                            Debug.Log(ChangeDir);
+                            //Debug.Log(ChangeDir);
                             // 생성된 오브젝트를 leafList 에 add로 추가.
                             leafList.Add(_leaf);
                             }
@@ -846,7 +846,7 @@ public class InGamePlayer : MonoBehaviour
                                 checkCreate = true;
                             g_intList.Add(ChangeDir);
 
-                            Debug.Log(ChangeDir);
+                            //Debug.Log(ChangeDir);
                             // 생성된 오브젝트를 leafList 에 add로 추가.
                             leafList.Add(_leaf);
                             }
@@ -859,7 +859,7 @@ public class InGamePlayer : MonoBehaviour
                             g_intList.Add(ChangeDir);
 
 
-                            Debug.Log(ChangeDir);
+                            //Debug.Log(ChangeDir);
                             // 생성된 오브젝트를 leafList 에 add로 추가.
                             leafList.Add(_leaf);
                             }
@@ -878,7 +878,7 @@ public class InGamePlayer : MonoBehaviour
                                 checkCreate = true;
                             g_intList.Add(ChangeDir);
 
-                            Debug.Log(ChangeDir);
+                            //Debug.Log(ChangeDir);
                             // 생성된 오브젝트를 leafList 에 add로 추가.
                             leafList.Add(_leaf);
 
@@ -891,7 +891,7 @@ public class InGamePlayer : MonoBehaviour
                             g_intList.Add(ChangeDir);
 
 
-                            Debug.Log(ChangeDir);
+                            //Debug.Log(ChangeDir);
                             // 생성된 오브젝트를 leafList 에 add로 추가.
                             leafList.Add(_leaf);
                             }
@@ -903,7 +903,7 @@ public class InGamePlayer : MonoBehaviour
                             g_intList.Add(ChangeDir);
 
 
-                            Debug.Log(ChangeDir);
+                            //Debug.Log(ChangeDir);
                             // 생성된 오브젝트를 leafList 에 add로 추가.
                             leafList.Add(_leaf);
                             }
@@ -916,7 +916,7 @@ public class InGamePlayer : MonoBehaviour
                             g_intList.Add(ChangeDir);
 
 
-                            Debug.Log(ChangeDir);
+                            //Debug.Log(ChangeDir);
                             // 생성된 오브젝트를 leafList 에 add로 추가.
                             leafList.Add(_leaf);
                             }
@@ -934,7 +934,7 @@ public class InGamePlayer : MonoBehaviour
                                 checkCreate = true;
                             g_intList.Add(ChangeDir);
 
-                            Debug.Log(ChangeDir);
+                            //Debug.Log(ChangeDir);
                             // 생성된 오브젝트를 leafList 에 add로 추가.
                             leafList.Add(_leaf);
 
@@ -947,7 +947,7 @@ public class InGamePlayer : MonoBehaviour
                             g_intList.Add(ChangeDir);
 
        
-                            Debug.Log(ChangeDir);
+                            //Debug.Log(ChangeDir);
                             // 생성된 오브젝트를 leafList 에 add로 추가.
                             leafList.Add(_leaf);
                             }
@@ -959,7 +959,7 @@ public class InGamePlayer : MonoBehaviour
                             g_intList.Add(ChangeDir);
 
         
-                            Debug.Log(ChangeDir);
+                            //Debug.Log(ChangeDir);
                             // 생성된 오브젝트를 leafList 에 add로 추가.
                             leafList.Add(_leaf);
                             }
@@ -972,7 +972,7 @@ public class InGamePlayer : MonoBehaviour
                             g_intList.Add(ChangeDir);
 
         
-                            Debug.Log(ChangeDir);
+                            //Debug.Log(ChangeDir);
                             // 생성된 오브젝트를 leafList 에 add로 추가.
                             leafList.Add(_leaf);
                             }

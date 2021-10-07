@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/01_Scenes/Main.unity
     guid: 9038184b01c23cf4db22b03e6f8d9142
   - enabled: 1
-    path: Assets/01_Scenes/TestInGame.unity
+    path: Assets/01_Scenes/InGame.unity
     guid: a12985b6f1e9a3c42a60f350307ad5e4
   - enabled: 1
     path: Assets/01_Scenes/TestFly.unity

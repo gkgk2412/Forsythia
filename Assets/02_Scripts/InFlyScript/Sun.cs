@@ -34,7 +34,7 @@ public class Sun : MonoBehaviour
         for (int i = 0; i < 3; i++)
         {
             ranCloud = Random.Range(0, 8);
-            Debug.Log(ranCloud);
+            //Debug.Log(ranCloud);
             //obj = (GameObject)Instantiate(Sphere[ranSph], firstground.transform.position, firstground.transform.rotation);
             obj = (GameObject)Instantiate(Sphere, firstground[ranCloud].transform.position, firstground[ranCloud].transform.rotation);
             obj.transform.localScale = new Vector3(35f, 35f, 5f); //구름링 클론 크기 변경
