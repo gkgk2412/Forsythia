@@ -79,6 +79,24 @@ public class ObjectPooler : MonoBehaviour
             Branch.Instance.mainBranchRightList.Add(objectToSpawn.transform.GetChild(2).gameObject.transform);
         }
 
+        //other Branch 들의 첫번째 자식 위치포지션을 list에 삽입.
+        if (objectToSpawn.name == "ForsyBranch(Clone)")
+        {
+            Branch.Instance.mainBranchPosList.Add(objectToSpawn.transform.GetChild(0).gameObject.transform);
+        }
+        if (objectToSpawn.name == "LeafBranch(Clone)")
+        {
+            Branch.Instance.mainBranchPosList.Add(objectToSpawn.transform.GetChild(0).gameObject.transform);
+        }
+        if (objectToSpawn.name == "NormalBranch(Clone)")
+        {
+            Branch.Instance.mainBranchPosList.Add(objectToSpawn.transform.GetChild(0).gameObject.transform);
+        }
+        if (objectToSpawn.name == "BreakBranch(Clone)")
+        {
+            Branch.Instance.mainBranchPosList.Add(objectToSpawn.transform.GetChild(0).gameObject.transform);
+        }
+
         poolDictionary[tag].Enqueue(objectToSpawn);
 
         return objectToSpawn;

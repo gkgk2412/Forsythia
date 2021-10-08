@@ -47,7 +47,7 @@ public class BranchSpawner : MonoBehaviour
 
     private void MainBranchSpawner02()
     {
-        for (int i = 0; i < 39; ++i)
+        for (int i = 0; i < Branch.Instance.MainbranchSize; ++i)
         {
             ObjectPooler.Instance.spawnFromPool("mainBranch"
                 , new Vector3(Branch.Instance.mainBranchList[i].position.x, Branch.Instance.mainBranchList[i].position.y, Branch.Instance.mainBranchList[i].position.z)
@@ -58,7 +58,7 @@ public class BranchSpawner : MonoBehaviour
 
     private void OtherBranchSpawner()
     {
-        for (int i = 0; i < 39; ++i)
+        for (int i = 0; i < Branch.Instance.MainbranchSize; ++i)
         {
             //랜덤값을 지정한다. 
             randDir = Random.RandomRange(1, 101);   //(만약 짝수가 나오면 왼쪽, 홀수가 나오면 오른쪽을 지정)   
@@ -67,9 +67,18 @@ public class BranchSpawner : MonoBehaviour
             if (randDir % 2 == 0)
             {
                 if(!isBreakBranch)
-                    randType = Random.RandomRange(1, 5);
+                {
+                    //마지막 가지일 경우
+                    if (i == Branch.Instance.MainbranchSize - 1)
+                        randType = Random.RandomRange(1, 4);
+
+                    else
+                        randType = Random.RandomRange(1, 5);
+                }
                 else
+                {
                     randType = Random.RandomRange(1, 4);
+                }
 
                 branchType = SelectBranchType(randType);
 
@@ -87,7 +96,7 @@ public class BranchSpawner : MonoBehaviour
                 {
                     ObjectPooler.Instance.spawnFromPool(branchType
                        , new Vector3(Branch.Instance.mainBranchLeftList[i].position.x, Branch.Instance.mainBranchLeftList[i].position.y, Branch.Instance.mainBranchLeftList[i].position.z)
-                       , Quaternion.Euler(-180.0f, -270.0f, -90.0f));
+                       , Quaternion.Euler(-180.0f, -270.0f, -270.0f));
 
                     isBreakBranch = false;
                 }

@@ -148,8 +148,8 @@ public class InGamePlayer : MonoBehaviour
     {
         FlyBranch = GameObject.FindGameObjectWithTag("fly");
 
-        ClickButton.IsStrong = false;
-        ClickButton.IsWeak = false;
+        //ClickButton.IsStrong = false;
+        //ClickButton.IsWeak = false;
         ClickButton.IsLeftJump = false;
         ClickButton.IsRightJump = false;
         BigSuccess = false;
@@ -183,63 +183,63 @@ public class InGamePlayer : MonoBehaviour
     {
         //Debug.Log(StartPosition.x);
 
-        //강하게 눌렀을 때 + 약하게 안 눌렀을 때 + 두 칸 다 올라왔으면
-        if (ClickButton.IsStrong && ClickButton.IsWeak == false && JumpCount == 0)
-        {
-            //클론이 하나 남았는데 강하게를 누를 수 없도록 하기 위한 방법 필요할듯
-            //한 칸씩 두 칸 올라가기
-            // StartCoroutine("Sleep"); //한 칸 올리고 해당 초동안 멈추고 한 칸 더 올리기
-            //한 번에 두 칸 올라가기
-            for (int i = 0; i < 2; i++)
-            {
-                JumpCount++;
-                UpNum++; //발판 개수 증가
+        ////강하게 눌렀을 때 + 약하게 안 눌렀을 때 + 두 칸 다 올라왔으면
+        //if (ClickButton.IsStrong && ClickButton.IsWeak == false && JumpCount == 0)
+        //{
+        //    //클론이 하나 남았는데 강하게를 누를 수 없도록 하기 위한 방법 필요할듯
+        //    //한 칸씩 두 칸 올라가기
+        //    // StartCoroutine("Sleep"); //한 칸 올리고 해당 초동안 멈추고 한 칸 더 올리기
+        //    //한 번에 두 칸 올라가기
+        //    for (int i = 0; i < 2; i++)
+        //    {
+        //        JumpCount++;
+        //        UpNum++; //발판 개수 증가
 
-                ScoreManager.Score += BranchScore * 2f; //점수 두배 증가
-                if (UpNum != 1)
-                {
-                    _Player.transform.position = new Vector3(lastItemPos.x, lastItemPos.y + 13, lastItemPos.z);
-                }
-                if (JumpCount == 2) //발판을 두 번 밟으면
-                {
-                    ClickButton.IsStrong = false; //강하게 누른 것이 풀림
-                    JumpCount = 0; //점프 횟수를 초기화
-                }
-            }
-        }
+        //        ScoreManager.Score += BranchScore * 2f; //점수 두배 증가
+        //        if (UpNum != 1)
+        //        {
+        //            _Player.transform.position = new Vector3(lastItemPos.x, lastItemPos.y + 13, lastItemPos.z);
+        //        }
+        //        if (JumpCount == 2) //발판을 두 번 밟으면
+        //        {
+        //            ClickButton.IsStrong = false; //강하게 누른 것이 풀림
+        //            JumpCount = 0; //점프 횟수를 초기화
+        //        }
+        //    }
+        //}
 
-        //약하게 눌렀을 때 + 강하게 안 눌렀을 때 + 발판에 닿았을 때
-        if (ClickButton.IsWeak && ClickButton.IsStrong == false)
-        {
-            JumpCount++;
-            UpNum++;
+        ////약하게 눌렀을 때 + 강하게 안 눌렀을 때 + 발판에 닿았을 때
+        //if (ClickButton.IsWeak && ClickButton.IsStrong == false)
+        //{
+        //    JumpCount++;
+        //    UpNum++;
 
-            ScoreManager.Score += BranchScore * 1f; //점수 한배 증가
+        //    ScoreManager.Score += BranchScore * 1f; //점수 한배 증가
 
-            if (g_intList[CountCh] == 1)//
-            {
-               if (UpNum != 1)
-                {
-                    _Player.transform.position = new Vector3(lastItemPos.x, lastItemPos.y + 13, lastItemPos.z);
-                }
-                CountCh++;
-            }
+        //    if (g_intList[CountCh] == 1)//
+        //    {
+        //       if (UpNum != 1)
+        //        {
+        //            _Player.transform.position = new Vector3(lastItemPos.x, lastItemPos.y + 13, lastItemPos.z);
+        //        }
+        //        CountCh++;
+        //    }
 
-            else if(g_intList[CountCh] == 0)
-            {
-                if (UpNum != 1)
-                {
-                    _Player.transform.position = new Vector3(lastItemPos.x, lastItemPos.y + 13, lastItemPos.z);
-                }
-                CountCh++;
-            }
+        //    else if(g_intList[CountCh] == 0)
+        //    {
+        //        if (UpNum != 1)
+        //        {
+        //            _Player.transform.position = new Vector3(lastItemPos.x, lastItemPos.y + 13, lastItemPos.z);
+        //        }
+        //        CountCh++;
+        //    }
 
-            if (JumpCount >= 1)
-            {
-                JumpCount = 0;
-                ClickButton.IsWeak = false;
-            }
-        }
+        //    if (JumpCount >= 1)
+        //    {
+        //        JumpCount = 0;
+        //        ClickButton.IsWeak = false;
+        //    }
+        //}
 
         if (FlyFlag == true && flyCheck == true) //끝에 다다르면
         {
@@ -411,7 +411,7 @@ public class InGamePlayer : MonoBehaviour
         _Player.transform.position = new Vector3(lastItemPos.x, lastItemPos.y + 30, lastItemPos.z);
         if (JumpCount == 2) //발판을 두 번 밟으면
         {
-            ClickButton.IsStrong = false; //강하게 누른 것이 풀림
+            //ClickButton.IsStrong = false; //강하게 누른 것이 풀림
             JumpCount = 0; //점프 횟수를 초기화
         }
     }
